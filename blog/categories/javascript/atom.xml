@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Javascript, | Roman Ganchenko]]></title>
+  <title><![CDATA[Category: Javascript | Roman Ganchenko]]></title>
   <link href="http://ganchenkor.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://ganchenkor.github.io/"/>
-  <updated>2014-07-26T19:32:17-07:00</updated>
+  <updated>2014-07-26T19:37:42-07:00</updated>
   <id>http://ganchenkor.github.io/</id>
   <author>
     <name><![CDATA[Roman Ganchenko]]></name>
