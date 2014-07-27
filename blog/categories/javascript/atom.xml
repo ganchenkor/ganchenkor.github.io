@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Javascript | Roman Ganchenko]]></title>
   <link href="http://ganchenkor.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://ganchenkor.github.io/"/>
-  <updated>2014-07-26T21:33:40-07:00</updated>
+  <updated>2014-07-26T21:54:14-07:00</updated>
   <id>http://ganchenkor.github.io/</id>
   <author>
     <name><![CDATA[Roman Ganchenko]]></name>
@@ -39,8 +39,7 @@ var cordova  = require(&lsquo;cordova&rsquo;);</p>
 "org.apache.cordova.contacts"
 </code></pre>
 
-<p>];
-pluginlist = pluginlist.sort(sortArray);</p>
+<p>].sort(sortArray);</p>
 
 <p>var pluginPath = cordova.findProjectRoot() + &ldquo;/plugins&rdquo;;
 var installedPlugins = findPlugins(pluginPath).sort(sortArray);</p>

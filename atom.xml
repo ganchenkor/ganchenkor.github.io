@@ -4,7 +4,7 @@
   <title><![CDATA[Roman Ganchenko]]></title>
   <link href="http://ganchenkor.github.io/atom.xml" rel="self"/>
   <link href="http://ganchenkor.github.io/"/>
-  <updated>2014-07-26T21:33:40-07:00</updated>
+  <updated>2014-07-26T21:54:14-07:00</updated>
   <id>http://ganchenkor.github.io/</id>
   <author>
     <name><![CDATA[Roman Ganchenko]]></name>
@@ -82,7 +82,6 @@ I believe that you should always need to avoid commiting any code from <code>./p
 <span class='line-number'>57</span>
 <span class='line-number'>58</span>
 <span class='line-number'>59</span>
-<span class='line-number'>60</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="err">#</span><span class="o">!</span><span class="err">/usr/bin/env node</span>
 </span><span class='line'><span class="kd">var</span> <span class="nx">exec</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;child-process-promise&#39;</span><span class="p">).</span><span class="nx">exec</span><span class="p">;</span>
 </span><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
@@ -94,8 +93,7 @@ I believe that you should always need to avoid commiting any code from <code>./p
 </span><span class='line'>  <span class="s2">&quot;de.appplant.cordova.plugin.email-composer&quot;</span><span class="p">,</span>
 </span><span class='line'>  <span class="s2">&quot;org.apache.cordova.globalization&quot;</span><span class="p">,</span>
 </span><span class='line'>  <span class="s2">&quot;org.apache.cordova.contacts&quot;</span>
-</span><span class='line'><span class="p">];</span>
-</span><span class='line'><span class="nx">pluginlist</span> <span class="o">=</span> <span class="nx">pluginlist</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="nx">sortArray</span><span class="p">);</span>
+</span><span class='line'><span class="p">].</span><span class="nx">sort</span><span class="p">(</span><span class="nx">sortArray</span><span class="p">);</span>
 </span><span class='line'>
 </span><span class='line'><span class="kd">var</span> <span class="nx">pluginPath</span> <span class="o">=</span> <span class="nx">cordova</span><span class="p">.</span><span class="nx">findProjectRoot</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;/plugins&quot;</span><span class="p">;</span>
 </span><span class='line'><span class="kd">var</span> <span class="nx">installedPlugins</span> <span class="o">=</span> <span class="nx">findPlugins</span><span class="p">(</span><span class="nx">pluginPath</span><span class="p">).</span><span class="nx">sort</span><span class="p">(</span><span class="nx">sortArray</span><span class="p">);</span>
