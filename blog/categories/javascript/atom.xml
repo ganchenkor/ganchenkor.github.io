@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Javascript, | Roman Ganchenko]]></title>
+  <link href="http://ganchenkor.github.io/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://ganchenkor.github.io/"/>
+  <updated>2014-07-26T19:32:17-07:00</updated>
+  <id>http://ganchenkor.github.io/</id>
+  <author>
+    <name><![CDATA[Roman Ganchenko]]></name>
+    <email><![CDATA[romanganchenko@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cordova Hook to Install Plugins]]></title>
+    <link href="http://ganchenkor.github.io/blog/2014/07/26/cordova-hook-to-install-plugins/"/>
+    <updated>2014-07-26T19:13:14-07:00</updated>
+    <id>http://ganchenkor.github.io/blog/2014/07/26/cordova-hook-to-install-plugins</id>
+    <content type="html"><![CDATA[<p>I came across this <a href="http://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/">post</a> and really liked the idea of preinstalling cordova plugins before building the project.<br/>
+I believe that you should always need to avoid commiting any code from <code>./platforms</code> or <code>./plugins</code> to source repository in any cordova projects.</p>
+
+<p>Here is my improved version of the code from <a href="http://devgirl.org">http://devgirl.org</a>
+```javascript Cordova Hook <a href="https://gist.github.com/ganchenkor/b5453e12641edb9f5fc4">https://gist.github.com/ganchenkor/b5453e12641edb9f5fc4</a></p>
+
+<h1>!/usr/bin/env node</h1>
+
+<p>var exec = require(&lsquo;child-process-promise&rsquo;).exec;
+var fs = require(&lsquo;fs&rsquo;);
+var path = require(&lsquo;path&rsquo;);
+var sys = require(&lsquo;sys&rsquo;);
+var cordova  = require(&lsquo;cordova&rsquo;);</p>
+
+<p>var pluginlist = [</p>
+
+<pre><code>"de.appplant.cordova.plugin.email-composer",
+"org.apache.cordova.globalization",
+"org.apache.cordova.contacts"
+</code></pre>
+
+<p>];
+pluginlist = pluginlist.sort(sortArray);</p>
+
+<p>var pluginPath = cordova.findProjectRoot() + &ldquo;/plugins&rdquo;;
+var installedPlugins = findPlugins(pluginPath).sort(sortArray);</p>
+
+<p>if(arraysIdentical(installedPlugins, pluginlist)){
+  return true;
+} else {</p>
+
+<pre><code>pluginlist.forEach(function  (plug) {
+    exec("cordova plugin add " + plug, puts);
+});
+</code></pre>
+
+<p>}</p>
+
+<p>function puts(error,stdout,stderr){</p>
+
+<pre><code>sys.puts(stdout);
+</code></pre>
+
+<p>};</p>
+
+<p>function arraysIdentical(a, b) {</p>
+
+<pre><code>var i = a.length;
+if (i != b.length) return false;
+while (i--) {
+    if (a[i] !== b[i]) return false;
+}
+return true;
+</code></pre>
+
+<p>};</p>
+
+<p>function findPlugins(pluginPath) {</p>
+
+<pre><code>var plugins = [],
+    stats;
+
+if (fs.existsSync(pluginPath)) {
+    plugins = fs.readdirSync(pluginPath).filter(function (fileName) {
+        stats = fs.statSync(path.join(pluginPath, fileName));
+        return fileName != '.svn' &amp;&amp; fileName != 'CVS' &amp;&amp; stats.isDirectory();
+    });
+}
+
+return plugins;
+</code></pre>
+
+<p>};</p>
+
+<p>function sortArray(a, b)
+{</p>
+
+<pre><code>var va = (a === null) ? "" : "" + a,
+    vb = (b === null) ? "" : "" + b;
+
+return va &gt; vb ? 1 : ( va === vb ? 0 : -1 );
+</code></pre>
+
+<p>};
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
