@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Javascript | Roman Ganchenko]]></title>
   <link href="http://ganchenkor.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://ganchenkor.github.io/"/>
-  <updated>2014-07-28T15:43:06-07:00</updated>
+  <updated>2014-08-08T15:25:52-07:00</updated>
   <id>http://ganchenkor.github.io/</id>
   <author>
     <name><![CDATA[Roman Ganchenko]]></name>
@@ -30,7 +30,7 @@ I believe that you should always need to avoid commiting any code from <code>./p
 
 <h1>!/usr/bin/env node</h1>
 
-<p>var exec = require(&lsquo;child-process-promise&rsquo;).exec;
+<p>var exec = require(&lsquo;child_process&rsquo;).exec;
 var fs = require(&lsquo;fs&rsquo;);
 var path = require(&lsquo;path&rsquo;);
 var sys = require(&lsquo;sys&rsquo;);

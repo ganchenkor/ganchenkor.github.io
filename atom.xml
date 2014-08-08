@@ -4,7 +4,7 @@
   <title><![CDATA[Roman Ganchenko]]></title>
   <link href="http://ganchenkor.github.io/atom.xml" rel="self"/>
   <link href="http://ganchenkor.github.io/"/>
-  <updated>2014-07-28T15:43:06-07:00</updated>
+  <updated>2014-08-08T15:25:52-07:00</updated>
   <id>http://ganchenkor.github.io/</id>
   <author>
     <name><![CDATA[Roman Ganchenko]]></name>
@@ -87,7 +87,7 @@ I believe that you should always need to avoid commiting any code from <code>./p
 <span class='line-number'>58</span>
 <span class='line-number'>59</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="err">#</span><span class="o">!</span><span class="err">/usr/bin/env node</span>
-</span><span class='line'><span class="kd">var</span> <span class="nx">exec</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;child-process-promise&#39;</span><span class="p">).</span><span class="nx">exec</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">exec</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;child_process&#39;</span><span class="p">).</span><span class="nx">exec</span><span class="p">;</span>
 </span><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
 </span><span class='line'><span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
 </span><span class='line'><span class="kd">var</span> <span class="nx">sys</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;sys&#39;</span><span class="p">);</span>
